@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crystal Hunter</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Added a link to our external stylesheet-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- Jumbotron for Title -->
+<div class="jumbotron">
+    <h1 class="text-center">Crystal Collector</h1>
+    <h3 class="text-center">Hunt for the Crystals!!</h3>
+
+</div>
+<!-- created a target field or alert for the score and the end game -->
+<!-- generate a random target not to show until target is hit, score excedes target, or busted... -->
+<!--create click events to add assigned gem point to score.KEEP SCORE  -->
+<h5>You will be given a random number at the start of the game. That is your target.</h5>
+<h5> Click on one of the four crystals. A specific number of points will be added to your total score.</h5>
+<h5>Win by matching the total score to the target number without busting</h5>
+
+<!-- create a reset -->
+<h5> Values of the crystals will change after game restarts</h5>
+
+
+<!-- style wants-- buttons are the gems- sized and positioned, would love to get positioning understood -->
+
+<!-- create cards and overlays for buttons and target -->
+
+
+
+<!-- create gem buttons -->
+<img class="crystal" src="red.jpg" style= "position:fixed;left:50px; top:400px;"/>
+<img class="crystal" src="blue.jpg" style="position:fixed;left:300px; top:400px;"/>
+<img class="crystal" src="purple.jpg" style="position:fixed;margin-left:550px; top:400px;"/>
+<img class="crystal" src= "green.jpg" style="position:fixed;left:800px; top:400px;"/>
+
+ <!-- if/else statement presenting the winning or losing image.hide/reveal    -->
+    
+    <div id="winner"><img src= "winner.jpg" style="position:fixed;left:1100px; top:400px;"/>
+
+    <div id="loser"><img src= "loser.jpg" style="position:fixed;left: 1200px; top:400px;"/>
+
+    <div id="score"><img src= "target.jpg" style="position:fixed;left: 1000px; top:100px;"/>    
+</div>
+<script>
+  
+            //randomly assign these values to the four buttons and reset each game take quotes out
+            var  gemValue= ["0", "1", "2", "3", "4", "5", "6", "7", "8","9", "10"];
+            
+            // Keep score by adding randomly assign var value to each stone after click to the target image
+            var score=[];
+            // randomly assign target or secret number
+            var  targetValue= ["16","17","18","20","21","22","23","24","25","26","27","28","29","30"]
+            //choose a random target value and keep score and compare it to
+            var targetValue = [Math.floor(Math.random() * targetValue.length)];
+            
+              
+            
+            var targetValue =[];
+            for (var i =0; i< word.length; i++)
+            {
+                targetValue [i] ="";          
+
+
+
+// ____________________________________________________________________________________
+
+// if target value > score alert guess again.
+// if (targetValue > score){
+// alert("Collect another stone!");
+
+
+
+// ____________________________________________________________________________________
+
+// Start by hiding both winner and loser at start
+// if target value = score show winner and hide loser or guess again
+//if target value <score show loser and hide guess again and winner
+//  Pop up a $ sign or a pot of gold if won =targetValue -->
+// Pop up a poor man if busted >targetValue -->
+
+
+$(document).ready(function() {
+    // $("").click(funtion()){
+        // $("").hide();
+        $("winner").hide();
+        $("loser").hide();
+
+        if (targetValue=score){
+            $("winner").unhide();
+        $("loser").hide();
+        }
+        if (targetValue<score){
+            $("winner").hide();
+        $("loser").unhide();
+        }
+        if (targetValue >score{
+            alert("Collect another stone!");  
+        })
+    }
+// reset the game target, the button values, the win lose images, alert, the score
+</script>

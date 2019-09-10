@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crystal Hunter</title>
+ <!-- Added link to the jQuery Library -->
+
+ <!-- Added a link to Bootstrap-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+ <!-- Added a link to our external stylesheet-->
+ <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<!-- Jumbotron for Title -->
+<div class="jumbotron"style="background-color:#00F3FF">
+     
+    <h1 class="text-center">Crystal Collector</h1>
+    <h3 class="text-center">Hunt for the Crystals!!</h3>
+
+    
+  <h1>Number to Guess: <span id="number-to-guess"></span></h1>
+  <br/>
+  <h5>You will be given a random number at the start of the game. That is your target.</h5>
+  <h5> Click on one of the four crystals. A specific number of points will be added to your total score.</h5>
+  <h5>Win by matching the total score to the target number without busting.</h5>
+  
+  <!-- create a reset ????????????????????????????????????????????????????????????????????????? -->
+  <h5> Values of the crystals will change after game restarts.</h5>
+  
+  <div id="crystals">
+  </div>
+  <!-- Note that this div is now empty. We will fill it dynamically use these divs to rotate through attached to 3 outcomes, score, Win or lose-->
+  <div id="crystals">
+      <img class="crystal" src="red.jpg" style= "position:fixed;left:50px; top:400px;"/>
+      <img class="crystal" src="blue.jpg" style="position:fixed;left:300px; top:400px;"/>
+      <img class="crystal" src="purple.jpg" style="position:fixed;margin-left:550px; top:400px;"/>
+      <img class="crystal" src= "green.jpg" style="position:fixed;left:800px; top:400px;"/>
+  </div>
+<div id="winner"><img src= "winner.jpg" style="position:fixed;left:1100px; top:400px; display:none"/>
+
+<div id="loser"><img src= "loser.jpg" style="position:fixed;left: 1200px; top:400px;display:none"/>
+
+<div id="score"><img src= "target.jpg" style="position:fixed;left: 1200px; top:100px;"/>       
+  
+</div>
+      
+      <!-- Hide show feature- The element will not take up any space when the display property set to "none". -->
+      <!-- How do I attach this to the score -->
+      <script>
+      function myFunction() {
+        var x = document.getElementById("winner!");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("loser!");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      </script>  
+  <!-- JAVASCRIPT  -->
+  <!-- ========================================= -->
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--  need to load js needs to load after jquery. -->
+   <script type="text/javascript" src="app.js"></script>
+  
+
+  
+</body>
+</html>
